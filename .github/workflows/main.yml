@@ -30,7 +30,7 @@ jobs:
       ARM_TENANT_ID: 'ac7c944a-5e83-43cc-944a-a34e04dc721a'
       ARM_CLIENT_ID: 'c0a6492c-b52a-4ed2-ab5a-7c9a81c7a959'
       ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-      AZURE_STORAGE: 'terraStordemoECS5612548'
+      AZURE_STORAGE: 'ecs10032000534fb161'
       
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
