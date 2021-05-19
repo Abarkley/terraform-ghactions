@@ -49,7 +49,7 @@ jobs:
       # Runs a single command using the runners shell
       # chmod +x makes .sh an executable on build machine. Bootstrapping terraform script
       - name: Build Terraform script
-        run: chmod +x ./tfstae.sh && ./tfstate.sh ${{ env.AZURE_STORAGE }}
+        run: chmod +x ./tfstate.sh && ./tfstate.sh ${{ env.AZURE_STORAGE }}
 
       # Adds Terraform to build machine
       # uses: hashicorp/setup-terraform@d22444889af304a44b997011fbabb81ff705a7b4
