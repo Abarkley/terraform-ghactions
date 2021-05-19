@@ -19,7 +19,12 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    
+    # This workflow uses a Azure Serice Principle ro access Aure resources
+    # az login
+    # az ad sp create-for-rbac -n "TerraformServicePrinciple" --role contributor --scopes /subscriptions/<subscriptionId>
+    #to get values below and used as secrets 
+    #(https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md)
     env:
       ARM_SUBSCRIPTION_ID: '0cc21a27-18b7-48cb-a6be-d0076bc80bb4'
       ARM_TENANT_ID: 'ac7c944a-5e83-43cc-944a-a34e04dc721a'
