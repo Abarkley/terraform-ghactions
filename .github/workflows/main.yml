@@ -40,7 +40,7 @@ jobs:
      # From market place. 
      # Must place above builds so AZ cli can be authenticated before builds are ran
       - name: Azure Login
-        uses: Azure/login@v1.1
+        uses: Azure/login@v1
         with:
           # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
           creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -58,7 +58,7 @@ jobs:
         
       # starts terrafomr init using the backend config to get terraform state ir partial state  
       - name: Terraform init
-        run: terraform init -backend-config="storage_account_name={{ env.AZURE_STORAGE }}"
+        run: terraform init -backend-config="storage_account_name=${{ env.AZURE_STORAGE }}"
       
       # Runs a terrfrom plan against state file and whats already provisioned
       # -out=tfPlan outputs plan to a file named tfplan
