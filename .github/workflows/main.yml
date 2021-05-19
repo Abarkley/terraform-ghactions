@@ -40,10 +40,11 @@ jobs:
      # From market place. 
      # Must place above builds so AZ cli can be authenticated before builds are ran
       - name: Azure Login
-        uses: Azure/login@v1
+        uses: Azure/login@v1.1
         with:
           # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+             
 
       # Runs a single command using the runners shell
       # chmod +x makes .sh an executable on build machine. Bootstrapping terraform script
