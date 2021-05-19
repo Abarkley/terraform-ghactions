@@ -63,9 +63,9 @@ jobs:
       # Runs a terrfrom plan against state file and whats already provisioned
       # -out=tfPlan outputs plan to a file named tfplan
       - name: Terraform Plan
-        run: terrafrom plan -out=tfPlan
+        run: terraform plan -out=tfPlan
        
      #  
       - name: Terraform Apply  
-        run: terrafom apply tfplan
+        run: terraform apply tfplan
           
