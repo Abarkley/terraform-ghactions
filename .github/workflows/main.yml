@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 # Terraform service principle ID for Azure
-#{
+# {
 #  "appId": "c0a6492c-b52a-4ed2-ab5a-7c9a81c7a959",
 #  "displayName": "TerraformServicePrinciple",
 #  "name": "http://TerraformServicePrinciple",
